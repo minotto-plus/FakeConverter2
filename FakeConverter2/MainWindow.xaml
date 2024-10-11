@@ -1,0 +1,43 @@
+﻿<Window x:Class="FakeConverter2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FakeConverter2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="350"
+        ResizeMode="NoResize">
+
+
+
+
+
+    <Grid Margin="10,10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="0"/>
+        </Grid.RowDefinitions>
+        <GroupBox Header="Image List" Grid.Row="1" FontFamily="ms gothic">
+            <StackPanel Margin="5">
+                <ListView x:Name="ListBox1" Height="100">
+                </ListView>
+                <Grid Margin="0,5,0,0" >
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                        <Button Click="Add_Click">Add Photo...</Button>
+                        <Button Click="Remove_Click" Margin="5,0">Remove Photo</Button>
+                    </StackPanel>
+                    <Button Click="Clear_Click" HorizontalAlignment="Right">Clear List</Button>
+                </Grid>
+
+            </StackPanel>
+        </GroupBox>
+        <TextBlock FontSize="30" Margin="0,10" Grid.Row="0" FontFamily="ms gothic">画像形式変換ツール</TextBlock>
+
+
+
+        <Button Margin="0,10" Grid.Row="2" Height="40" x:Name="Pick_button" Click="Pick_Click" Content="1. 画像ファイルを選択"></Button>
+        <Button Margin="0,10" Grid.Row="2" x:Name="Convert_button" Click="Convert_Click" IsEnabled="False" Content="2. 変換する"></Button>
+        <TextBlock Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20px" x:Name="bottomText"></TextBlock>
+    </Grid>
+</Window>

@@ -1,0 +1,51 @@
+[haswellHage-8.1.0-10 Q16 x86_64 1919-114-514]
+Copyright © 1919-114514 haswellHage Studio LLC.
+For help, try 'convert --help'.
+
+Starting conversion...
+Input file: image.jpg
+Output file: image.webp
+Input image analysis:
+--Format: JPEG
+--Color space: sRGB
+--Resolution: 1920x1080
+--Depth: 8-bit
+--Channels: 3 (RGB)
+--Profile: sRGB IEC61966-2.1
+Conversion parameters:
+--Output format: WebP
+--Quality: 85
+--Lossless: Off
+--Color space: sRGB
+--Alpha channel: Off
+Conversion process:
+--Decoding JPEG image...
+--Converting to WebP format...
+--Applying quality settings...
+--Encoding WebP image...
+Output image analysis:
+--Format: WebP
+--Color space: sRGB
+--Resolution: 1920x1080
+--Depth: 8-bit
+--Channels: 3 (RGB)
+--File size: 350 KB
+[1919-08-10 11:45:14] Conversion progress: 0%
+[1919-08-10 11:45:16] Conversion progress: 3%
+[1919-08-10 11:45:18] Conversion progress: 7%
+[1919-08-10 11:45:20] Conversion progress: 12%
+[1919-08-10 11:45:22] Conversion progress: 18%
+[1919-08-10 11:45:24] Conversion progress: 25%
+[1919-08-10 11:45:26] Conversion progress: 31%
+[1919-08-10 11:45:28] Conversion progress: 39%
+[1919-08-10 11:45:30] Conversion progress: 46%
+[1919-08-10 11:45:32] Conversion progress: 54%
+[1919-08-10 11:45:34] Conversion progress: 62%
+[1919-08-10 11:45:36] Conversion progress: 70%
+[1919-08-10 11:45:38] Conversion progress: 78%
+[1919-08-10 11:45:40] Conversion progress: 86%
+[1919-08-10 11:45:42] Conversion progress: 94%
+[1919-08-10 11:45:44] Conversion progress: 99%
+[2023-11-23 11:45:45] Conversion progress: 100%
+[2023-11-23 11:45:45] Conversion complete.
+Conversion completed successfully in 8.10 seconds.
