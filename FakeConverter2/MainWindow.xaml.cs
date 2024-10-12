@@ -141,15 +141,69 @@ namespace FakeConverter2
             // 項目を削除します
             // 選択項目がない場合は処理をしない
             if (ListBox1.SelectedItems.Count == 0)
+            {
                 return;
+
+            }
+
+
 
             // 選択された項目を削除
             ListBox1.Items.RemoveAt(ListBox1.SelectedIndex);
+            if (ListBox1.Items.Count == 0)
+            {
+                Convert_button.IsEnabled = false;
+            }
         }
 
         private void Clear_Click(object sender, RoutedEventArgs e)
         {
             ListBox1.Items.Clear();
+
+            if (ListBox1.Items.Count == 0)
+                Convert_button.IsEnabled= false;
         }
+
+
+
+        private void Resize_checkbox_Checked(object sender, RoutedEventArgs e)
+        {
+            Resize_combobox.IsEnabled = true;
+            Resize_combobox.Text = "x2";
+        }
+
+
+        private void Rotation_checkbox_Checked(object sender, RoutedEventArgs e)
+        {
+            Rotation_combobox.IsEnabled = true;
+            Rotation_combobox.Text = "90°";
+        }
+
+
+        private void Format_checkbox_Checked(object sender, RoutedEventArgs e)
+        {
+            Format_combobox.IsEnabled = true;
+            Format_combobox.Text = "png";
+        }
+
+        private void Resize_checkbox_Unchecked(object sender, RoutedEventArgs e)
+        {
+            Resize_combobox.IsEnabled = false;
+            Resize_combobox.Text = "";
+        }
+
+        private void Rotation_checkbox_Unchecked(object sender, RoutedEventArgs e)
+        {
+            Rotation_combobox.IsEnabled = false;
+            Rotation_combobox.Text = "";
+        }
+
+        private void Format_checkbox_Unchecked(object sender, RoutedEventArgs e)
+        {
+            Format_combobox.IsEnabled = false;
+            Format_combobox.Text = "";
+        }
+
+
     }
 }

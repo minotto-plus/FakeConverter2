@@ -16,11 +16,20 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="0"/>
         </Grid.RowDefinitions>
+
+
+
+        <TextBlock FontSize="30" Margin="0,10" Grid.Row="0" FontFamily="ms gothic">画像形式変換ツール</TextBlock>
+
+
+
         <GroupBox Header="Image List" Grid.Row="1" FontFamily="ms gothic">
             <StackPanel Margin="5">
-                <ListView x:Name="ListBox1" Height="100">
+                <ListView x:Name="ListBox1" Height="150">
                 </ListView>
                 <Grid Margin="0,5,0,0" >
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
@@ -32,12 +41,50 @@
 
             </StackPanel>
         </GroupBox>
-        <TextBlock FontSize="30" Margin="0,10" Grid.Row="0" FontFamily="ms gothic">画像形式変換ツール</TextBlock>
 
 
 
-        <Button Margin="0,10" Grid.Row="2" Height="40" x:Name="Pick_button" Click="Pick_Click" Content="1. 画像ファイルを選択"></Button>
-        <Button Margin="0,10" Grid.Row="2" x:Name="Convert_button" Click="Convert_Click" IsEnabled="False" Content="2. 変換する"></Button>
-        <TextBlock Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20px" x:Name="bottomText"></TextBlock>
+        <GroupBox Header="Render Options" Grid.Row="2" FontFamily="ms gothic" Margin="0,5">
+            <StackPanel Margin="5">
+                <Grid>
+                    <CheckBox VerticalAlignment="Center" x:Name="Resize_checkbox" Checked="Resize_checkbox_Checked" Unchecked="Resize_checkbox_Unchecked">Resize</CheckBox>
+                    <ComboBox HorizontalAlignment="Right" VerticalAlignment="Center" Width="200" IsEnabled="False" x:Name="Resize_combobox">
+                        <TextBlock Text="x2"/>
+                        <TextBlock Text="x4"/>
+                        <TextBlock Text="x8"/>
+                        <TextBlock Text="xVideos"/>
+                    </ComboBox>
+                </Grid>
+                <Grid Margin="0,5">
+                    <CheckBox VerticalAlignment="Center" x:Name="Rotation_checkbox" Checked="Rotation_checkbox_Checked" Unchecked="Rotation_checkbox_Unchecked">Rotation</CheckBox>
+                    <ComboBox HorizontalAlignment="Right" VerticalAlignment="Center" Width="200" IsEnabled="False" x:Name="Rotation_combobox">
+                        <TextBlock Text="90°"/>
+                        <TextBlock Text="180°"/>
+                        <TextBlock Text="270°"/>
+                    </ComboBox>
+                </Grid>
+                <Grid>
+                    <CheckBox VerticalAlignment="Center" x:Name="Format_checkbox" Checked="Format_checkbox_Checked" Unchecked="Format_checkbox_Unchecked">Format</CheckBox>
+                    <ComboBox HorizontalAlignment="Right" VerticalAlignment="Center" Width="200" IsEnabled="False" x:Name="Format_combobox">
+                        <TextBlock Text="png"/>
+                        <TextBlock Text="jpg"/>
+                        <TextBlock Text="webp"/></ComboBox>
+                </Grid>
+
+            </StackPanel>
+        </GroupBox>
+
+
+
+        <Grid Grid.Row="3" Margin="0,5">
+            <StackPanel Margin="0">
+                <Button x:Name="Convert_button" Click="Convert_Click" IsEnabled="False" Content="Convert" Padding="5"></Button>
+            </StackPanel>
+        </Grid>
+
+
+
+        <Button Margin="0,10" Grid.Row="4" Height="40" x:Name="Pick_button" Click="Pick_Click" Content="1. 画像ファイルを選択"></Button>
+        <TextBlock Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20px" x:Name="bottomText"></TextBlock>
     </Grid>
 </Window>
